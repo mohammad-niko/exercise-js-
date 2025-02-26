@@ -147,7 +147,7 @@
 
 // let firstName = "mohammad";
 // let lastName = "niko";
-// // console.log(firstName[3]);
+// console.log(firstName[3]);
 // let fullName = firstName.concat(" " + lastName);
 // console.log(fullName);
 // let fullName2 = lastName.concat(" " + firstName);
@@ -164,24 +164,70 @@
 
 // SOME STRING METHODS:
 // toUpperCase()
-const greeting = "this is  power";
-let greetingaUper = greeting.toUpperCase();
-console.log("toUpperCase = " , greetingaUper);
-console.log("toLowerCase = " ,  greetingaUper.toLowerCase());
-const score = " i have space in first and end "
-console.log("trim = " , score.trim());
-const word = "!JavaScript is awesome";
-console.log("charAt = " ,  word.charAt(10));
-console.log("substring = " , word.substring(3, 7));
-//  substring
-//   به ما توسط میاد نگاه میکنه مثلا از ایندکس 3 تا هفت رو برامون میاره که چی هست در  این  ایندکس ها.index که بهش میدیم یه
+// const greeting = "this is  power";
+// let greetingaUper = greeting.toUpperCase();
+// console.log("toUpperCase = ", greetingaUper);
+// console.log("toLowerCase = ", greetingaUper.toLowerCase());
+// const score = " i have space in first and end ";
+// console.log("trim = ", score.trim());
+// const word = "!JavaScript is awesome";
+// console.log("charAt = ", word.charAt(10));
+// console.log("substring = ", word.substring(3, 7));
+// //  substring
+// //   به ما توسط میاد نگاه میکنه مثلا از ایندکس 3 تا هفت رو برامون میاره که چی هست در  این  ایندکس ها.index که بهش میدیم یه
 const masagge = "I love programming";
-console.log ("includes = " , masagge.includes("programming"));
+console.log("includes = ", masagge.includes("programming"));
 console.log(masagge.includes("play"));
-// includes 
-// به ما کمک میکنه تا بتونیم ببینیم در این ورییبل ما کلمه که میخواهیم هست یا نه مثلا در مثال بالا من گفتم که کلمه پروگرمینگ هست در مسیج یا نه اومد گفت اره  هست
-console.log( "indexOf = " , masagge.indexOf("v"));
-console.log( "indexOf = " , masagge.indexOf("s"));
-// indexof با 
-// میتونیم بفهمیم که کاراکتری که میخواهیم در کدوم ایندکس هستش
+// // includes
+// // به ما کمک میکنه تا بتونیم ببینیم در این ورییبل ما کلمه که میخواهیم هست یا نه مثلا در مثال بالا من گفتم که کلمه پروگرمینگ هست در مسیج یا نه اومد گفت اره  هست
+// console.log("indexOf = ", masagge.indexOf("v"));
+// console.log("indexOf = ", masagge.indexOf("s"));
+// // indexof با
+// // میتونیم بفهمیم که کاراکتری که میخواهیم در کدوم ایندکس هستش
+// // مثال کاربردی در پایین
+// let email = "user123@gmail.com";
+// let atIndex = email.indexOf("@");
+
+// if (atIndex !== -1) {
+//     console.log("این ایمیل معتبر است، نماد '@' در ایندکس: ", atIndex);
+// } else {
+//     console.log("ایمیل نامعتبر است! نماد '@' وجود ندارد.");
+// }
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+
+// const sentence = "Javascript is amazing";
+// console.log("slice = ", sentence.slice(5, 15));
+// console.log("slice = ", sentence.slice(-10));
+//  console.log(sentence.slice(sentence.indexOf("is") + 2))
+//  تمرین:
+//  const email = "user@email.com";
+//  console.log(email.slice(email.indexOf("@") + 1))
+// const good = "this is a bed idea!";
+// console.log(good.replace("bed" , "good"));
+
+
+
+// const text = "I fuck you and i fuck you.";
+// console.log(text.replaceAll("fuck" , "love" ));
+
+// const line = "fuck love";
+// console.log(line.repeat(5));
+// const line2 = "-";
+// console.log(line2.repeat(10) + "sara" +line2.repeat(10));
+
+// const email5 =prompt("enter your email").trim() ;
+// let email6= "*****" + email5.slice(5);
+// if (email5.includes("@")){
+//     if(email5.endsWith("gmail.com")){
+//         let maskedEmail = email5.length > 5 ? "*****" + email5.slice(5) : "*****";  
+//         console.log(`holle welcom😎 (yor email ${maskedEmail})`)  
+//     }
+//     else{
+//         console.log("don't forgt: gmail.com🫡")
+//     }
+// }
+
+// else{
+//     console.log("do you want sing up or not😑")
+// }
 
