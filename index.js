@@ -175,9 +175,9 @@
 // console.log("substring = ", word.substring(3, 7));
 // //  substring
 // //   به ما توسط میاد نگاه میکنه مثلا از ایندکس 3 تا هفت رو برامون میاره که چی هست در  این  ایندکس ها.index که بهش میدیم یه
-const masagge = "I love programming";
-console.log("includes = ", masagge.includes("programming"));
-console.log(masagge.includes("play"));
+// const masagge = "I love programming";
+// console.log("includes = ", masagge.includes("programming"));
+// console.log(masagge.includes("play"));
 // // includes
 // // به ما کمک میکنه تا بتونیم ببینیم در این ورییبل ما کلمه که میخواهیم هست یا نه مثلا در مثال بالا من گفتم که کلمه پروگرمینگ هست در مسیج یا نه اومد گفت اره  هست
 // console.log("indexOf = ", masagge.indexOf("v"));
