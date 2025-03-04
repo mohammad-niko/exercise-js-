@@ -4,21 +4,21 @@
 //todo-3. Is it an equilateral triangle?
 //todo-4.Is it a right triangle ?
 
-let angle1 = "80";
-let angle2 = "50";
-let angle3 = "50";
+let angle1 = 60;
+let angle2 = 60;
+let angle3 = 60;
 
-if (+angle1 + +angle2 + +angle3 === 180) {
+if (angle1 + angle2 + angle3 === 180) {
     if (
-        angle1.includes("60") === true &&
-        angle2.includes("60") === true &&
-        angle3.includes("60") === true
+        angle1  === 60 &&
+        angle2  === 60 &&
+        angle3  === 60
     ) {
         console.log("equilateral triangle");
     } else if(
-    angle1.includes("90") === true ||
-    angle2.includes("90") === true ||
-    angle3.includes("90") === true)
+    angle1 === 90 ||
+    angle2  === 90 ||
+    angle3 === 90)
     {
         console.log("right triangle");
     }else{
