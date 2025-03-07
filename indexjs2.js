@@ -117,44 +117,110 @@
 
 // excer:
 
-let task = ["book", "excer", "play", "runing"];
-let action = prompt(`add , removelast , removefirst , revrse , search , `);
+// let task = ["book", "excer", "play", "runing"];
+// let action = prompt(
+//   `add , removelast , removefirst , list , revrse , search  `
+// );
+
+// switch (action) {
+//   case "add":
+//     task.push(prompt("add new task"));
+//     console.log(task);
+//     break;
+//   case "removefirst":
+//     task.shift();
+//     console.log(task);
+//     break;
+//   case "removelast":
+//     task.pop();
+//     console.log(task);
+//     break;
+
+//   case "list":
+//     console.log(task);
+//     break;
+
+//   case "revrse":
+//     let lastOrFirst = prompt("all or last");
+//     switch (lastOrFirst) {
+//       case "first":
+//         console.log(task);
+//         break;
+//       case "last":
+//         let taskReversed = [...task].reverse();
+//         console.log(taskReversed);
+//         break;
+//       default:
+//         console.log("have you problm😐?");
+//     }
+//     break;
+
+//   case "search":
+//     let searchTask = prompt("enter task to search");
+//     if (task.includes(searchTask)) {
+//       console.log("Good luck! Task found");
+//     } else {
+//       console.log("you don't have tihs task");
+//     }
+//     break;
+//   default:
+//     console.log("Invalid action!");
+// }
+
+let tasks = ["learn j", "go to gym", "play game", "run"];
+let action = prompt("enter action: add , remove , search ")
+  .trim()
+  .toLowerCase();
 
 switch (action) {
   case "add":
-    task.push(prompt("add new task"));
-    console.log(task)
-    break;
-    case "removefirst":
-        task.shift()
-    console.log(task)
+    let newTask = prompt("enter new task").trim().toLowerCase();
+    let priority = prompt("enter task priorty (high, medium, low):  ")
+      .trim()
+      .toLowerCase();
+    switch (priority) {
+      case "high":
+        tasks.unshift(newTask);
+        console.log("High priority task added:", newTask);
+        console.log(tasks);
+
         break;
-        case "removelast" :
-            task.pop();
-    console.log(task)
-break;
+      case "medium":
+        tasks.push(newTask);
+        console.log("medium priority task added:", newTask);
+        console.log(tasks);
+        break;
 
-case "revrse":
-    let lastOrFirst = prompt("first or last");
-    switch (lastOrFirst){
-        case "first":
-            console.log(task);
-            break
-            case "last":
-                let taskReveatse = [...task].reverse((a , b) => b - a );
-                console.log(taskReveatse);
-                break;
-                default:
-                    console.log('have you problm😐');
+      case "low":
+        tasks.push(newTask);
+        console.log("low priority task added:", newTask);
+        console.log(tasks);
+        break;
+      default:
+        console.log("Invalid priority!");
     }
-break;
+    break;
 
-case "search" :
-    let searchTask = prompt('enter task to search');
-    if (tasks.includes(searchTask)){
-        
+  case "remove":
+    let removeTask = prompt("Enter task to remove:").trim().toLowerCase();
+    if (tasks.includes(removeTask)) {
+      tasks.splice(tasks.indexOf(removeTask), 1);
+      console.log("Task removed:", removeTask);
+      console.log("Updated tasks:", tasks);
+    } else {
+      console.log("Task not found!");
     }
+    break;
 
+  case "search":
+    let searchTask = prompt("Enter to search:").trim().toLowerCase();
+    if (tasks.includes(searchTask)) {
+      console.log("task found:", searchTask);
+    } else {
+      console.log("task not found");
+    }
+    break;
 
-
+  default:
+    console.log("Invalid action!");
 }
