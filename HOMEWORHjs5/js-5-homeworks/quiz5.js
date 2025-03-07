@@ -3,3 +3,13 @@
 // Please use variables given to you and Do Not change the name of them!!
 let programs = ['java', 'kotlin', 'javascript', 'python', 'typeScript'];
 let javascriptContain;
+
+switch (programs.includes('javascript')){
+
+    case true :
+      javascriptContain = "The array contains javascript" ;
+        break
+        default:
+            console.log("The array does not contain javascript");
+}
+console.log(javascriptContain);
