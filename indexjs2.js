@@ -224,3 +224,26 @@ switch (action) {
   default:
     console.log("Invalid action!");
 }
+
+
+
+
+//  این زیر روشی هست که میتونیم تمامی ایندکس های یک کلمه یا عددی که چند بار تکرار شده رو پیدا کنیم
+
+function findAllIndex(array, element) {
+  let indices = [];
+  let currentIndex = array.indexOf(element);
+
+  while (currentIndex != -1) {
+    indices.push(currentIndex);
+    currentIndex = array.indexOf(element, currentIndex + 1);
+  }
+
+  return indices;
+}
+
+let priceList = [10, 8, 2, 31, 10, 1, 65, 10];
+
+console.log(findAllIndex(priceList, 10)); // [ 0, 4, 7 ]
+console.log(findAllIndex(priceList, 8)); // [ 1 ]
+console.log(findAllIndex(priceList, 9)); // []
