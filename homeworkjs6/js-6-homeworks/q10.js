@@ -5,6 +5,17 @@
 //example: area(3) = 28.27, 		circumference(3) = 18.85
 
 
-function calculateCircleArea 
- 
-function calculateCircleCircumference
+
+function calculateCircleArea(area){
+    let mathPi = Math.PI.toFixed(2)
+    return mathPi * (area * area) ;
+}
+ console.log(calculateCircleArea(3));
+
+
+
+function calculateCircleCircumference(area){
+    let mathPi = Math.PI.toFixed(2);
+    return area * (mathPi * 2)
+}
+console.log(calculateCircleCircumference(3));

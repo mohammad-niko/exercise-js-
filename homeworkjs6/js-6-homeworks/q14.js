@@ -1,7 +1,9 @@
 //?:What is the problem with this code?
 
 function sum(num1, num2) {
-  num1 + num2;
+ return num1 + num2;
 }
 
-sum(5, 9);
+console.log(sum(5, 9));
+
+//  don't have return

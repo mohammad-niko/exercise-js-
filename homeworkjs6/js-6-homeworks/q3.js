@@ -7,12 +7,12 @@
 
 // Finish the isNegative function to test if the passed number is negative (less than zero)
 function isNegative(number) {
-  return;
+  return number < 0;
 }
 
 // Finish the isBetweenZeroAnd10 function to test if the passed number is between 0 and 10
 function isBetweenZeroAnd10(number) {
-  return;
+  return number < 10 && number >= 0 ;
 }
 
 /* 

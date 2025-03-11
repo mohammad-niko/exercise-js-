@@ -9,8 +9,16 @@
  */
 
 function calculateSalesTax(price) {
-  return;
+//   return  price + price * (20 / 100);
+// ------------------------------------------
+
+return  price + price * 0.2
+
+
 }
+
+
+
 
 /*
   CURRENCY FORMATTING
@@ -23,7 +31,9 @@ function calculateSalesTax(price) {
 */
 
 function addTaxAndFormatCurrency(price) {
-  return;
+  // return  "£" + calculateSalesTax(price).toFixed(2);
+  let fullPrice = calculateSalesTax(price).toFixed(2);
+  return "£" + fullPrice
 }
 
 /* 
@@ -64,5 +74,4 @@ test(
 test(
   'addTaxAndFormatCurrency function - case 3 works',
   addTaxAndFormatCurrency(34),
-  '£40.80'
-);
+  '£40.80');

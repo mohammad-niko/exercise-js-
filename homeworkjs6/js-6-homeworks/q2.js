@@ -8,11 +8,18 @@
  */
 
 function first(arr) {
-  return; // complete this statement
+  return arr[0]; // complete this statement
+}
+function last(arr) {
+  return arr[arr.length - 1]; 
 }
 
 function last(arr) {
-  return; // complete this statement
+  // راه دیگه ای به ذهنم نرسید💔🚶‍♂️
+if(arr[3]=== undefined){
+ return arr[2]
+}
+  return   arr[3]// complete this statement
 }
 
 /* 
@@ -21,7 +28,7 @@ function last(arr) {
 ===================================================
 */
 let numbers = [1, 2, 3];
-let names = ['Hossein', 'Sina', 'AmirAli', 'Sirvan'];
+let names = ["Hossein", "Sina", "AmirAli", "Sirvan"];
 
 console.log(first(numbers));
 console.log(last(numbers));
