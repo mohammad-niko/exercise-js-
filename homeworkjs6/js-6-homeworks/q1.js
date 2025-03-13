@@ -11,7 +11,6 @@ function isEmpty(arr) {
   return arr.length === 0; // complete this statement
 }
 
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
