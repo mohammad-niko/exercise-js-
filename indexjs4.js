@@ -168,3 +168,20 @@ let star2 = "";
 // i--
 // }
 // console.log(reversed);
+
+
+// let number= [10, 20, 35, 45, 50, 60, 70]; 
+ 
+// let i = 0 ;
+// while(i< number.length){
+//     if(number[i]>50){
+//         console.log(number[i]);
+//         break
+//     }
+//     i++
+// }
+
+
+
+
+
