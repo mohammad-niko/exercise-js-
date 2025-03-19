@@ -4,4 +4,8 @@
 // search about split(), reverse(), join()
 
 // !Answer:
-function reverseString() {}
+function reverseString(string) {
+return string.split("").reverse().join("")
+}
+
+console.log(reverseString("google"));

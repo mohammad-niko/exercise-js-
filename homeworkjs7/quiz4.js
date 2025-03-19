@@ -4,4 +4,16 @@
 // todo3: remove all the items that are NaN: (hint: use isNaN())
 // todo4: calculate the sum of all its numbers
 // !Answer:
-function SumNumbers() {}
+const arr = ["1", "100", "-9", "", true, null];
+function SumNumbers(number) {
+  let num = 0;
+  for (let i = 0; i < number.length; i++) {
+    let tabdil = parseInt(number[i]);
+    if (!isNaN(tabdil)) {
+      num += tabdil;
+    }
+  }
+  return num;
+}
+
+console.log(SumNumbers(arr));
