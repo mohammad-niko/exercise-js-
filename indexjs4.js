@@ -169,9 +169,8 @@ let star2 = "";
 // }
 // console.log(reversed);
 
+// let number= [10, 20, 35, 45, 50, 60, 70];
 
-// let number= [10, 20, 35, 45, 50, 60, 70]; 
- 
 // let i = 0 ;
 // while(i< number.length){
 //     if(number[i]>50){
@@ -181,7 +180,104 @@ let star2 = "";
 //     i++
 // }
 
+// while loopas:
+// let num = 0 ;
+
+// while(num <= 5){
+//     console.log(num);
+//     num++
+// }
+
+// let userInput = 0;
+
+// while (userInput <= 10) {
+//     userInput = prompt("لطفاً عددی بزرگ‌تر از ۱۰ وارد کنید:");
+// }
+// console.log("عدد مناسب وارد شد:", userInput);
+
+// let num = 0;
+
+// while (num <= 10) {
+//   console.log(num);
+//   num += 2;
+// }
+
+// let karbar;
+// let num1 = 0;
+
+// while (true) {
+//   karbar = +prompt("type a Positive number (or a negative number to stop):");
+
+//   if (karbar < 0) {
+//     break;
+//   }
+
+//   num1 += karbar;
+// }
+// console.log("Oops! You typed a negative number");
+
+// let i =0;
+
+// while (i <= 10){
+//     console.log(i);
+//     i++
+// }
+
+// let c=0;
+
+// while (c <= 10){
+//     console.log(c / 2);
+//     c++
+// }
+
+// for of loops:
+
+// let numbers = [10, 20, 30, 40];
+
+// for(let num of numbers)(
+//     console.log(num)
+// )
+
+// let word = "JavaScript";
+
+// for (let latter of word ){
+//     console.log(latter);
+// }
+
+// let names = ["mohammd", "ali", "hasan", " mahadi"];
+
+// for (let i of names) {
+//   console.log(i);
+// }
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+// let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let sum=0;
+
+// for (let num of number) {
+//     if (num % 2 === 0) {
+//         sum += num;
+
+//     }
+// }
+
+// const language = "JavaScript";
+// let arr = [];
+
+// for (let rev of language) {
+//   arr.push(rev);
+// }
+// arr.reverse()
+// let arrString = arr.join("");
+// console.log(arrString);
 
 
 
 
+// let names = ["mohammd", "ali", "hasan", " mahadi", "jam" , "abo"];
+
+// for(let i of names){
+//     if(i.length > 4 ){
+//         console.log(i);
+//     }
+// }
