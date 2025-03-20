@@ -94,9 +94,9 @@
 // }
 // console.log(mmad);
 
-let star = "******";
+// let star = "******";
 
-let star2 = "";
+// let star2 = "";
 
 // for (let i = 0; i < star.length; i++) {
 //   star2 += "*";
@@ -271,9 +271,6 @@ let star2 = "";
 // let arrString = arr.join("");
 // console.log(arrString);
 
-
-
-
 // let names = ["mohammd", "ali", "hasan", " mahadi", "jam" , "abo"];
 
 // for(let i of names){
@@ -281,3 +278,118 @@ let star2 = "";
 //         console.log(i);
 //     }
 // }
+
+// -------------------------------------------------------------------------------------------------------------------------
+
+// ARROW
+// FUNCTIONS:
+
+// let add = (a ,b ) => a + b;
+
+// console.log(add(5 , 3));
+
+// let isEven = num => num % 2 ===0;
+
+// console.log(isEven(121496843));
+
+// let numbers = [1, 2, 3, 4];
+
+// let dobale = numbers.map(num=>num * 2 );
+// console.log(dobale);
+
+// let numbers = [1, 2, 3];
+
+// numbers.forEach((num, index, arr) => {
+//   arr[index] = num * 2;
+// });
+
+// console.log(numbers);
+
+// let number = [1, 2, 3, 4];
+
+// number.forEach((num,indexs,arr) => {
+//     arr[indexs] =num*2
+// })
+// console.log(number);
+// -------------------------------------------------------------------------------------------------------------------------
+
+// let numbers = [1, 2, 3, 4, 5];
+
+// numbers.forEach((num , indexs ,arr)=> arr[indexs] = num*2 );
+// console.log(numbers);
+
+// let names = ["Ali", "Reza", "Mohammad", "Sara"];
+
+// names.forEach((i) => console.log(`${i} : ${i.length}`))
+
+// let numbers = [11, 22, 33, 44, 55, 66, 77, 88];
+
+// numbers.forEach((num) => {
+//   if(num%2===0){
+//     console.log(num);
+//   }
+// });
+
+// let numbers = [11, 22, 33, 44, 55, 66, 77, 88];
+// let evenNumbers = [];
+
+// numbers.forEach((num) => {
+//   if (num % 2 === 0) {
+//     evenNumbers.push(num);
+//   }
+// });
+
+// console.log(evenNumbers);
+
+
+
+// let sentences = [
+//   "JavaScript is awesome",
+//   "I love programming",
+//   "Coding is fun",
+//   "Challenge yourself"
+// ];
+// let words=[];
+// sentences.forEach((sentences)=>{
+// let wordSplit =sentences.split(" ");
+// wordSplit.forEach((names)=>{
+// if(names.length > 5){
+// words.push(names)
+// }
+// })
+// })
+// console.log(words);
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+// map:
+
+
+// let ages = [10, 15, 20, 25, 30]; 
+
+// let newAge = ages.map(age => age*7);
+// console.log(newAge);
+
+// let sentences = [
+//   "JavaScript is amazing",
+//   "I love coding",
+//   "Challenges make you stronger"
+// ];
+
+// let  sentencesLength = sentences.map(length => length.split(" ").length);
+
+// console.log(sentencesLength);
+
+
+
+
+
+let students = ["ali", "REZA", "mOhammaD", "SaRa", "hassan"];
+
+
+let uperFirsetLatter = students.map(
+  uper => uper[0].toUpperCase() + uper.slice(1).toLowerCase()
+)
+console.log(uperFirsetLatter);
+
+
+
+
