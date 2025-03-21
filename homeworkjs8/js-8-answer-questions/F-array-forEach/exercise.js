@@ -8,12 +8,28 @@
 */
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+// first :
+arr.forEach((num) => {
+  if (num % 3 === 0 && num % 5 === 0) return console.log("fizzBuzz");
+  else if (num % 3 === 0) return console.log("fizz");
+  else if (num % 5 === 0) return console.log("Buzz");
+  else return console.log(num);
+});
+
+// second:
+arr.forEach((num) => {
+  if (num % 3 === 0) {
+    if( num % 5 === 0)return console.log("fizzBuzz");
+    else return console.log("fizz");
+  }else if (num % 5 === 0 ) return  console.log("Buzz");
+else return console.log(num);
+});
 
 /* EXPECTED OUTPUT */
 
 /*
 1
-2
+2 
 'Fizz'
 4
 'Buzz'

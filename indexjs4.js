@@ -382,14 +382,23 @@
 
 
 
-let students = ["ali", "REZA", "mOhammaD", "SaRa", "hassan"];
+// let students = ["ali", "REZA", "mOhammaD", "SaRa", "hassan"];
 
 
-let uperFirsetLatter = students.map(
-  uper => uper[0].toUpperCase() + uper.slice(1).toLowerCase()
-)
-console.log(uperFirsetLatter);
+// let uperFirsetLatter = students.map(
+//   uper => uper[0].toUpperCase() + uper.slice(1).toLowerCase()
+// )
+// console.log(uperFirsetLatter);
 
 
+
+let names = ["Manoochehr", "Amir", "Vahid"];
+function formatName(name) {
+  return name.split("")[0].toUpperCase() + name.slice(1);
+}
+
+names.map(formatName).forEach(function (name, index) {
+  console.log(index + ": " + name);
+});
 
 

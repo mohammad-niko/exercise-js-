@@ -7,12 +7,21 @@
   Tip: use the string method .split() and the array method .join()
 */
 
-function capitalize(str) {}
+function capitalize(str) {
+return  str.split("")[0].toUpperCase() + str.slice(1)
+}
+
+function capitalize(str) {
+let arr = str.split("");
+arr[0]=arr[0].toUpperCase();
+return arr.join("")
+  }
 
 /* 
-  DO NOT EDIT BELOW THIS LINE
-  --------------------------- */
+DO NOT EDIT BELOW THIS LINE
+--------------------------- */
 let sampleName = 'benyamin';
+
 
 console.log(capitalize(sampleName));
 console.log(capitalize('hello'));

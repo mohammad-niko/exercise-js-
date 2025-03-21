@@ -4,3 +4,6 @@ const reverseString = function (str) {
   return str.split("").reverse().join("");
 };
 // !Answer:
+
+
+const arrowReverseString = str => str.split("").reverse().join("");

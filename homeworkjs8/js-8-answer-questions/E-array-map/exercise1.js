@@ -3,8 +3,19 @@
 
 let numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
-const solutionOne = // write code here
-const solutionTwo = // write code here
-const solutionThree = // write code here
+// first :
+function multiple(num){
+  return  num * 100
+};
+const solutionOne = numbers.map(multiple) ;
 
+
+// second :
+const solutionTwo = numbers.map((num)=>{
+   return num * 100
+});
+
+
+// Third:
+const solutionThree = numbers.map(num => num * 100);
 
