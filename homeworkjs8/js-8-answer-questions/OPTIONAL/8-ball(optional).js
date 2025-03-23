@@ -82,9 +82,9 @@ function shakeBall() {
   console.log("The ball has shaken!");
   const randomNumber = Math.round(Math.random() * 3);
   const randomNumber2 = Math.round(Math.random() * 4);
-  const whatEver = answers[randomNumber][randomNumber2];
+  const selectedAnswer = answers[randomNumber][randomNumber2];
 
-  return  whatEver;
+  return selectedAnswer;
 }
 /* 
 This function should say whether the answer it is given is
@@ -96,21 +96,11 @@ This function should say whether the answer it is given is
 This function should expect to be called with any value which was returned by the shakeBall function.
 */
 function checkAnswer(answer) {
-  switch (answer) {
-    case 0:
-      return "very positive";
-      case 1:
-        return "positiv";
-        
-        case 2:
-          return "negative";
-          
-          case 3:
-            return "very negative";
-
-            default:
-              return "invalid value"
-            } 
+  if (answers[0].includes(answer)) return "very positive";
+  else if (answers[1].includes(answer)) return "positive";
+  else if (answers[2].includes(answer)) return "negative";
+  else if (answers[3].includes(answer)) return "very negative";
+  else return "invalid value";
 }
 
 /* 
