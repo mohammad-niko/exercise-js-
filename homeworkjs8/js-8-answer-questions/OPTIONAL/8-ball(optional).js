@@ -46,21 +46,71 @@
 
 // This should log "The ball has shaken!"
 // and return the answer.
+// const user = prompt("type you divece😃");
+const answers = [
+  [
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes - definitely.",
+    "You may rely on it.",
+  ],
+  [
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Yes.",
+    "Signs point to yes.",
+  ],
+  [
+    " Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now.",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+  ],
+  [
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good.",
+    "Very doubtful.",
+  ],
+];
+
 function shakeBall() {
-  //Write your code in here
+  console.log("The ball has shaken!");
+  const randomNumber = Math.round(Math.random() * 3);
+  const randomNumber2 = Math.round(Math.random() * 4);
+  const whatEver = answers[randomNumber][randomNumber2];
+
+  return  whatEver;
 }
-
 /* 
-  This function should say whether the answer it is given is
-    - very positive
-    - positive
-    - negative
-    - very negative
+This function should say whether the answer it is given is
+- very positive
+- positive
+- negative
+- very negative
 
-  This function should expect to be called with any value which was returned by the shakeBall function.
+This function should expect to be called with any value which was returned by the shakeBall function.
 */
 function checkAnswer(answer) {
-  //Write your code in here
+  switch (answer) {
+    case 0:
+      return "very positive";
+      case 1:
+        return "positiv";
+        
+        case 2:
+          return "negative";
+          
+          case 3:
+            return "very negative";
+
+            default:
+              return "invalid value"
+            } 
 }
 
 /* 
