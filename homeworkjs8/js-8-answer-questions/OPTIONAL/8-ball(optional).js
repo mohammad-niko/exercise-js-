@@ -46,7 +46,7 @@
 
 // This should log "The ball has shaken!"
 // and return the answer.
-// const user = prompt("type you divece😃");
+const user = prompt("type you divece😃");
 const answers = [
   [
     "It is certain.",

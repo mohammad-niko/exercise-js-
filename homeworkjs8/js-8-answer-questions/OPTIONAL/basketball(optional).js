@@ -35,3 +35,75 @@
  *
  * @format
  */
+// part one :
+const mike = [1, 2, 3];
+const jan = [1, 2, 3];
+function average(mike, jan) {
+    if (!Array.isArray(mike) && !Array.isArray(jan) && mike.length === 0 && jan.length === 0)  return "⚠️ Cannot calculate average!";
+    
+  let fullNumMike = 0;
+  let fullNumJan = 0;
+  for (let a = 0; a < mike.length; a++) {
+    fullNumMike = fullNumMike + mike[a];
+  }
+  for (let b = 0; b < jan.length; b++) {
+    fullNumJan = fullNumJan + jan[b];
+  }
+  fullNumMike = fullNumMike / mike.length ;
+  fullNumJan = Math.round(fullNumJan / jan.length );
+  // console.log(`average  mike : ${fullNumMike}`);
+  // console.log(`average jan : ${fullNumJan}`);
+  let averageScore = [];
+  averageScore.push(fullNumMike, fullNumJan);
+  return averageScore;
+}
+
+function compar(avreageArr) {
+  
+  if (avreageArr[0] > avreageArr[1])
+    return `high point : mike team ${avreageArr[0]}`;
+  else if (avreageArr[0] < avreageArr[1])
+    return `high poin : jan team${avreageArr[0]}`;
+  else if (avreageArr[0] === avreageArr[1])
+    return `🏆 We have a tie!  
+✨ Mike: ${avreageArr[0]}  
+✨ John: ${avreageArr[1]}  
+Everyone played amazingly well! 🔥`;
+  else return "inavled value";
+}
+
+console.log(compar(average(mike, jan)));
+
+const mary = [1, 2, 3];
+function addMary(mary) {
+    if (!Array.isArray(mary) || mary.length === 0) return "⚠️ Cannot calculate average!";
+    
+  let fullNumMary = 0;
+  for (let c = 0; c < mary.length; c++) {
+    fullNumMary = fullNumMary + mary[c];
+  }
+  fullNumMary = fullNumMary / mary.length;
+  console.log(`average mary : ${fullNumMary}`);
+  return fullNumMary;
+}
+
+function lastCompar(janAndMikeTeam, maryTeam) {
+  if (janAndMikeTeam[0] > janAndMikeTeam[1] && janAndMikeTeam[0] > maryTeam)
+    return `high point : mike team ${janAndMikeTeam[0]}`;
+  else if (
+    janAndMikeTeam[1] > janAndMikeTeam[0] &&
+    janAndMikeTeam[1] > maryTeam
+  )
+    return `high point : jan team ${janAndMikeTeam[1]}`;
+  else if (maryTeam > janAndMikeTeam[0] && maryTeam > janAndMikeTeam[1])
+    return `high point : mary team ${maryTeam}`;
+  else if (maryTeam === janAndMikeTeam[1] && maryTeam === janAndMikeTeam[0])
+    return `🏆 We have a tie!  
+✨ Mike: ${janAndMikeTeam[0]}  
+✨ John: ${janAndMikeTeam[1]}  
+✨ Mary: ${maryTeam}  
+Everyone played amazingly well! 🔥`;
+  else return "invaid value";
+}
+
+console.log(lastCompar(average(mike, jan), addMary(mary)));
