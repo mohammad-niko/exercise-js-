@@ -40,7 +40,7 @@ const mike = [1, 2, 3];
 const jan = [1, 2, 3];
 function average(mike, jan) {
     if (!Array.isArray(mike) && !Array.isArray(jan) && mike.length === 0 && jan.length === 0)  return "⚠️ Cannot calculate average!";
-    
+
   let fullNumMike = 0;
   let fullNumJan = 0;
   for (let a = 0; a < mike.length; a++) {
@@ -59,15 +59,15 @@ function average(mike, jan) {
 }
 
 function compar(avreageArr) {
-  
+
   if (avreageArr[0] > avreageArr[1])
     return `high point : mike team ${avreageArr[0]}`;
   else if (avreageArr[0] < avreageArr[1])
     return `high poin : jan team${avreageArr[0]}`;
   else if (avreageArr[0] === avreageArr[1])
-    return `🏆 We have a tie!  
-✨ Mike: ${avreageArr[0]}  
-✨ John: ${avreageArr[1]}  
+    return `🏆 We have a tie!
+✨ Mike: ${avreageArr[0]}
+✨ John: ${avreageArr[1]}
 Everyone played amazingly well! 🔥`;
   else return "inavled value";
 }
@@ -77,7 +77,7 @@ console.log(compar(average(mike, jan)));
 const mary = [1, 2, 3];
 function addMary(mary) {
     if (!Array.isArray(mary) || mary.length === 0) return "⚠️ Cannot calculate average!";
-    
+
   let fullNumMary = 0;
   for (let c = 0; c < mary.length; c++) {
     fullNumMary = fullNumMary + mary[c];
@@ -98,12 +98,48 @@ function lastCompar(janAndMikeTeam, maryTeam) {
   else if (maryTeam > janAndMikeTeam[0] && maryTeam > janAndMikeTeam[1])
     return `high point : mary team ${maryTeam}`;
   else if (maryTeam === janAndMikeTeam[1] && maryTeam === janAndMikeTeam[0])
-    return `🏆 We have a tie!  
-✨ Mike: ${janAndMikeTeam[0]}  
-✨ John: ${janAndMikeTeam[1]}  
-✨ Mary: ${maryTeam}  
+    return `🏆 We have a tie!
+✨ Mike: ${janAndMikeTeam[0]}
+✨ John: ${janAndMikeTeam[1]}
+✨ Mary: ${maryTeam}
 Everyone played amazingly well! 🔥`;
   else return "invaid value";
 }
 
 console.log(lastCompar(average(mike, jan), addMary(mary)));
+
+// part two :
+
+const bill = [124, 48, 286];
+
+function tipCalculator(bill) {
+    
+  let tip = [];
+  let calculator = 0 ;
+  if (!bill) return  "⚠️ Invalid input!";
+  for (let i =0 ; i < bill.length ; i++) {
+    if (bill[i] < 50) {
+      calculator = (bill[i] / 100) * 20;
+      tip.push(calculator);
+    } else if (bill[i] >= 50 && bill[i] <= 200) {
+       calculator = (bill[i] / 100) * 15;
+      tip.push(calculator);
+    } else if (bill[i] > 200) {
+       calculator = (bill[i] / 100) * 10;
+      tip.push(calculator);
+    } 
+  }
+  return tip
+}
+
+function billTip(tip , bill ){
+    let billTip = [];
+    for (let i =0 ; i < bill.length ; i++ ){
+        billTip.push(tip[i] +bill[i])
+    }
+    
+    return `bill with tip : ${billTip}`
+}
+const tips = tipCalculator(bill); 
+console.log(tips);
+console.log(billTip(bill , tips));
