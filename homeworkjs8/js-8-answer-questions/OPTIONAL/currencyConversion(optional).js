@@ -8,8 +8,11 @@
  * @format
  */
 
-function convertToUSD() {}
-
+function convertToUSD(convert) {
+  const conertToUUSD = convert * 1.4;
+  return `$${conertToUUSD}`;
+}
+console.log(convertToUSD(500));
 /*
   CURRENCY FORMATTING
   ===================
@@ -18,8 +21,14 @@ function convertToUSD() {}
   They have also decided that they should add a 1% fee to all foreign transactions, which means you only convert 99% of the £ to BRL.
 */
 
-function convertToBRL() {}
+function convertToBRL(convert) {
+  const ninetyNinePercent = (convert / 100) * 99;
 
+  const conertToBRL = ninetyNinePercent * 5.7;
+
+  return `BRL ${conertToBRL}`;
+}
+console.log( convertToBRL(500));
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
 
