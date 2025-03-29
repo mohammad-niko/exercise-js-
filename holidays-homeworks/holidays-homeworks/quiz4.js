@@ -3,3 +3,9 @@
 Example ===> 
 string = "Francis" -->The given argument is: Francis. Ok?
 */
+
+
+function string(str){
+return `The given argument is: ${str}.ok`
+}
+console.log(string("Francis"));

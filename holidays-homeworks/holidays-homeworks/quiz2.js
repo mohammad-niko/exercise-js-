@@ -11,7 +11,7 @@ function Falt(towDarray){
     let arr = [];
     let oneDArray = towDarray.join(",");
 
-let rezlt =  oneDArray.split(",").map(chr => arr.push(parseInt(chr)))
+let rezlt =  oneDArray.split(",").map(chr => arr.push(parseInt(chr)))//دیگه از این بهتر روش دیگ9ه ای به ذهنم نرسید
 
     return arr
 }

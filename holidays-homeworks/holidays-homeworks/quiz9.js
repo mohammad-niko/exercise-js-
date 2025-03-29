@@ -4,3 +4,7 @@ Example ===>
 123 = 123
 10 = 20
 */
+function test(whether){
+  return  whether >20 ? whether : 20
+}
+console.log(test(21));
