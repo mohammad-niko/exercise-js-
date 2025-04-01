@@ -22,27 +22,33 @@
 // }
 
 // 2:
+// function checkEmail(email) {
+//   if (email.length < 8)
+//     return "Your email should be at least 8 characters long.";
 
-//  let user = prompt("enter your email"); درسته کار نمیکنه و یکم مشکل داره ولی خب😂😂😐
+//   let hasNumber = false;
+//   let hasUpper = false;
+//   let hasLower = false;
 
-//  function checkEmail(email){
-// if (email.length >= 8 ) {
-//     for (let i = 0 ; i < email.length ; i++){
-//         if (typeof email[i] === "number"){
-// if (email[i] === email[i].toUpperCase() && email[i] === email[i].toLowerCase() ){
-// return `holle welcom😎 (yor email ${email})`
-// }else{
-//     return "your email shoud have number one word to Uper case";
+//   for (let i = 0; i < email.length; i++) {
+//     let chr = email[i];
+//     // !isNaN(parseInt(chr)) بهترین روش برای برسی اینکه کاراکتر عدد هست یا نه
+//     if (!isNaN(parseInt(chr))) hasNumber = true;
+//     else if (chr === chr.toUpperCase() && chr !== chr.toLowerCase())
+//       hasUpper = true;
+//     else if (chr === chr.toLowerCase() && chr !== chr.toUpperCase())
+//       hasLower = true;
+//   }
+
+//   if (!hasNumber) return "Your email should contain at least one number.";
+//   if (!hasUpper)
+//     return "Your email should contain at least one uppercase letter.";
+//   if (!hasLower)
+//     return "Your email should contain at least one lowercase letter.";
+
+//   return "Email is valid.";
 // }
-//         }else{
-//             return "your email shoud have number between 0 and 9";
-//         }
-//     }
-// }else{
-// return "your email shoud mordan 8 chr";
-// }
-//  }
-
+// console.log(checkEmail("mohammadniko19A"));
 // 3:
 // function game(arr) {
 //   let numberRandom = Math.floor(Math.random() * arr.length);
@@ -53,7 +59,6 @@
 //   else return "You lost";
 // }
 // console.log(game(["mmad", "fuizah", "gazak", "spideh", "ronaldo"]));
-
 
 // 4;
 // let arrName = ["mmad", "fuizah", "gazak", "spideh", "ronaldo"];
@@ -68,3 +73,40 @@
 // }
 
 // console.log(search(user));
+
+// تابع charCodeAt() مقدار کد یونیکد (ASCII یا Unicode) یک کاراکتر را برمی‌گرداند. این کد عددی نشان‌دهنده‌ی موقعیت کاراکتر در جدول یونیکد است.
+// 📌 حروف بزرگ از 65 (A) تا 90 (Z) هستند.
+// 📌 حروف کوچک از 97 (a) تا 122 (z) هستند.
+// 📌 اعداد ۰ تا ۹ از 48 (0) تا 57 (9) هستند.
+// function isUpperCase(chr) {
+//     let code = chr.charCodeAt(0);
+//     return code >= 65 && code <= 90;
+// }
+// !isNaN(parseInt(chr)) بهترین روش برای برسی اینکه کاراکتر عدد هست یا ن
+
+// function chickemail(email) {
+//   if (email.length < 8)
+//     return "Your email should be at least 8 characters long.";
+
+//   let hasNumber = false;
+//   let hasUpperCase = false;
+//   let hasLowerCase = false;
+
+//   for (let i = 0; i < email.length; i++) {
+//     let chr = email[i];
+//     if (chr.charCodeAt(0) > 48 && chr.charCodeAt(0) < 57) hasNumber = true;
+//     else if (chr.charCodeAt(0) > 65 && chr.charCodeAt(0) < 90)
+//       hasUpperCase = true;
+//     else if (chr.charCodeAt(0) > 97 && chr.charCodeAt(0) < 122)
+//       hasLowerCase = true;
+//   }
+
+//   if (!hasNumber) return "Your email should contain at least one number.";
+//   if (!hasUpperCase)
+//     return "Your email should contain at least one uppercase letter.";
+//   if (!hasLowerCase)
+//     return "Your email should contain at least one lowercase letter.";
+
+//   return "Email is valid.";
+// }
+// console.log(chickemail("Mohammadniko19"));
