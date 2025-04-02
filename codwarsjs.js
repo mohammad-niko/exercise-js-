@@ -111,7 +111,87 @@
 //   for (let i = 0; i < number; i++) {
 //     if (i % 3 === 0 ||i % 5 === 0 ) {
 //       sum += i
-//     } 
+//     }
 //   }
 // return sum
 // }
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+// function order(words) {
+//   if (!words) return "";
+//   let wordSplit = words.split(" ");
+//   function extraNumber(word) {
+//     for (let chr of word) {
+//       if (chr >= "0" && chr <= "9") {
+//         return Number(chr);
+//       }
+//     }
+//     return 0;
+//   }
+
+//   wordSplit.sort((a,b)=> {
+// let numA = extraNumber(a);
+// let numB = extraNumber(b);
+// return numA - numB
+//   }
+// )
+
+// return wordSplit.join(" ")
+// }
+// console.log(order("is2 Thi1s T4est 3a"));
+
+// function order(words){ //با ریجکس کد بالا
+
+//     return words.split(' ').sort(function(a, b){
+//         return a.match(/\d/) - b.match(/\d/);
+//      }).join(' ');
+//   }
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+function toCamelCase(str) {
+  if(!str || str === "") return "";
+  let toSplit = str.split("-");
+  let saveToSplit = toSplit;
+  let saveFirstIndex = toSplit[0];
+  let toRemoveFirstIndex = saveToSplit.shift();
+  let toSaveArrLower = [saveFirstIndex];
+  if (
+    saveFirstIndex[0].charCodeAt(0) >= 97 &&
+    saveFirstIndex[0].charCodeAt(0) <= 122
+  ) {
+    let filter = saveToSplit.map((chr) => chr[0].toUpperCase() + chr.slice(1));
+    toSaveArrLower.push(filter);
+    return toSaveArrLower.flat().join("");
+  } else {
+    let filter1 = toSplit.map((chr) => chr[0].toUpperCase() + chr.slice(1));
+    toSaveArrLower.push(filter1);
+    return toSaveArrLower.flat().join("");
+  }
+}
+console.log(toCamelCase("the-stealth-warrior"));
+// کد من بالایی هست با دهن سرویسی کد پایین کد هوش چقدر قشنگ نوشته دهنت سرویس ممد
+
+function toCamelCase(str) {
+  if (!str) return "";
+
+  let words = [];
+  let word = "";
+
+  
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "-" || str[i] === "_") {
+      words.push(word);
+      word = "";
+    } else {
+      word += str[i];
+    }
+  }
+  words.push(word); 
+
+  
+  for (let i = 1; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+  }
+
+  return words.join(""); 
+}
