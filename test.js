@@ -110,3 +110,52 @@
 //   return "Email is valid.";
 // }
 // console.log(chickemail("Mohammadniko19"));
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+// 1:
+// const daysOfTheWeek = [
+//   "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday , Sunday",
+// ];
+// function days(arr) {
+//   if (!arr) return "invaled value";
+//   let daysArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let m = 0; m < daysOfTheWeek.length; m++) {
+//       if (daysOfTheWeek[m] !== arr[i] || daysOfTheWeek[m] === arr[i]) {
+//         daysArr.push(daysOfTheWeek[m]);
+//       }
+//     }
+//   }
+//   return daysArr;
+// }
+// console.log(days(["Tuesday,Thursday,Saturday"]));
+
+// 2:
+// function bigestAndSmallest(...num) {
+//   if (!num || num.length === 0) return "invaled value";
+//   let toSplit = num.sort((a, b) => a - b);
+//   let evenNum = toSplit.filter(n => n % 2 === 0);
+// console.log(evenNum);
+//   return `Bigest number: ${toSplit[toSplit.length - 1]} , Smallest number: ${toSplit[0]} , Even number :${evenNum} `;
+// }
+// console.log(bigestAndSmallest(55, 5, 2, 74, 8, 256, 85, 2, 58, 42));
+
+// function someName(randomNumber) {
+//     let sumName = ["Thursday, Friday, Saturday , Sunday, mmad , asgar , ahbar"];
+//     let rezult = [];
+//     if (!randomNumber || typeof randomNumber !== "number") return "invaled value";
+//     if (randomNumber <= 1 || randomNumber >= 4)
+//         return "you shold write number between 1 and 4";
+//     for (let i =0 ; i <=someName.length; i++) {
+//         let randomNumbersss = Math.floor(Math.random()* 3) ;
+//         rezult.push(someName[randomNumber])
+//         rezult.push(sumName[randomNumber])
+// console.log(sumName[1]);
+//   }
+// return rezult;
+// }
+// console.log(someName(3));
+
+
+
+

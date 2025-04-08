@@ -148,50 +148,142 @@
 //   }
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
-function toCamelCase(str) {
-  if(!str || str === "") return "";
-  let toSplit = str.split("-");
-  let saveToSplit = toSplit;
-  let saveFirstIndex = toSplit[0];
-  let toRemoveFirstIndex = saveToSplit.shift();
-  let toSaveArrLower = [saveFirstIndex];
-  if (
-    saveFirstIndex[0].charCodeAt(0) >= 97 &&
-    saveFirstIndex[0].charCodeAt(0) <= 122
-  ) {
-    let filter = saveToSplit.map((chr) => chr[0].toUpperCase() + chr.slice(1));
-    toSaveArrLower.push(filter);
-    return toSaveArrLower.flat().join("");
-  } else {
-    let filter1 = toSplit.map((chr) => chr[0].toUpperCase() + chr.slice(1));
-    toSaveArrLower.push(filter1);
-    return toSaveArrLower.flat().join("");
-  }
-}
-console.log(toCamelCase("the-stealth-warrior"));
+// function toCamelCase(str) {
+//   if(!str || str === "") return "";
+//   let toSplit = str.split("-");
+//   let saveToSplit = toSplit;
+//   let saveFirstIndex = toSplit[0];
+//   let toRemoveFirstIndex = saveToSplit.shift();
+//   let toSaveArrLower = [saveFirstIndex];
+//   if (
+//     saveFirstIndex[0].charCodeAt(0) >= 97 &&
+//     saveFirstIndex[0].charCodeAt(0) <= 122
+//   ) {
+//     let filter = saveToSplit.map((chr) => chr[0].toUpperCase() + chr.slice(1));
+//     toSaveArrLower.push(filter);
+//     return toSaveArrLower.flat().join("");
+//   } else {
+//     let filter1 = toSplit.map((chr) => chr[0].toUpperCase() + chr.slice(1));
+//     toSaveArrLower.push(filter1);
+//     return toSaveArrLower.flat().join("");
+//   }
+// }
+// console.log(toCamelCase("the-stealth-warrior"));
 // کد من بالایی هست با دهن سرویسی کد پایین کد هوش چقدر قشنگ نوشته دهنت سرویس ممد
 
-function toCamelCase(str) {
-  if (!str) return "";
+// function toCamelCase(str) {
+//   if (!str) return "";
 
-  let words = [];
-  let word = "";
+//   let words = [];
+//   let word = "";
 
-  
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === "-" || str[i] === "_") {
-      words.push(word);
-      word = "";
-    } else {
-      word += str[i];
-    }
-  }
-  words.push(word); 
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === "-" || str[i] === "_") {
+//       words.push(word);
+//       word = "";
+//     } else {
+//       word += str[i];
+//     }
+//   }
+//   words.push(word);
 
-  
-  for (let i = 1; i < words.length; i++) {
-    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
-  }
+//   for (let i = 1; i < words.length; i++) {
+//     words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+//   }
 
-  return words.join(""); 
-}
+//   return words.join("");
+// }
+
+//کد باب استفاده از ریجکس
+// function toCamelCase(str) {
+//   if (!str) return ""; // اگر رشته خالی بود، همون موقع برگردونیم
+
+//   return str
+//     .split(/[-_]/) // رشته رو با توجه به "-" و "_" بشکن
+//     .map((word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)) // کلمات بعدی رو Capitalize کن
+//     .join(""); // به هم بچسبون
+
+// پاینی کدریجکس هستش
+// let harch = "apple;banana,grape;orange";
+// console.log(harch.split(/[;:,]/));
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+// Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer. You don't need to validate the form of the Roman numeral.
+
+// Modern Roman numerals are written by expressing each decimal digit of the number to be encoded separately, starting with the leftmost digit and skipping any 0s. So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and 2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI", uses each letter in descending order.
+
+// function solution(roman) {
+//   if (!roman) return "";
+//   let toSplit = roman.split("");
+//   let arr = [];
+//   let rezult = 0;
+//   for (let i = 0; i < toSplit.length; i++) {
+//     switch (toSplit[i]) {
+//       case "I":
+//         arr.push(1);
+//         break;
+//       case "V":
+//         arr.push(5);
+//         break;
+//       case "X":
+//         arr.push(10);
+//         break;
+//       case "L":
+//         arr.push(50);
+//         break;
+//       case "C":
+//         arr.push(100);
+//         break;
+//       case "D":
+//         arr.push(500);
+//         break;
+//       case "M":
+//         arr.push(1000);
+//         break;
+//     }
+//   }
+//   console.log(arr);
+//   for (let i = arr.length -1; i >= 0; i--) {
+
+//     if (arr[i] < arr[i +1]) {
+//       rezult = rezult -= arr[i];
+//     } else {
+//       rezult = rezult +=  arr[i];
+//     }
+//     console.log(rezult);
+//   }
+//   return rezult;
+// }
+// console.log(solution("MCMXC"));//تاین تمرین خیلی دهن سرویس بود
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+// function moveZeros(arr) {
+//   let harch = [];
+//   if (!arr || arr === "") return "";
+//   let find = arr.filter((num) => num === 0);
+//   let remove = arr.filter((item) => item !== 0);
+//   for (let m = 0; m < remove.length; m++) {
+//     harch.push(remove[m]);
+//   }
+//   for (let i = 0; i < find.length; i++) {
+//     harch.push(find[i]);
+//   }
+//   return harch;
+// }
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+
+// // کد تمیز تر
+
+// function moveZeros(arr) {
+// return arr.filter(item => item !==0).concat(arr.filter(item=> item === 0))
+//   }
+// ------------------------------------------------------------------------------------------------------------------------------------------
+// function FilterNumbers(str) {
+//   return str
+//     .split("")
+//     .filter((c) => isNaN(parseInt(c)))
+//     .join("");
+// }
+// console.log(FilterNumbers("test123"));
